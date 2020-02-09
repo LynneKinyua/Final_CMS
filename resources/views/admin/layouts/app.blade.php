@@ -86,15 +86,22 @@
                     <h5>{{ Auth::user()->name}}</h5>
                 </div>
                 <div class="items-container">
-                    <a href="#">
+                    <a href="{{ route('home') }}">
                         <h6 class="menu-item"><i class="fas fa-tachometer-alt"></i> Dashboard</h6>
                     </a>
-                    <a href="#">
+                    <a href="{{ route('admin.users') }}">
                         <h6 class="menu-item"><i class="fas fa-users"></i> Users</h6>
                     </a>
                     <a href="#">
-                        <h6 class="menu-item"><i class="fas fa-id-card-alt"></i> Clients</h6>
+                        <h6 class="menu-item"><i class="far fa-handshake"></i> Clients</h6>
                     </a>
+                    <a href="{{ route('admin.adminleads') }}">
+                        <h6 class="menu-item"><i class="fas fa-id-card-alt"></i> Leads</h6>
+                    </a>
+                    <a href="#">
+                        <h6 class="menu-item"><i class="fas fa-calendar-week"></i> Activities</h6>
+                    </a>
+
                     <a href="#">
                         <h6 class="menu-item"><i class="fas fa-book-open"></i> Reports</h6>
                     </a>

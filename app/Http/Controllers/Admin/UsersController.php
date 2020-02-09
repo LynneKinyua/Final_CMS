@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
@@ -29,8 +30,8 @@ class UsersController extends Controller
         $request->validate([
             'name'=> 'required|min:5',
             'email'=>'required|unique:users|email',
-            'role'=>'required',
-            'passwprd'=>'required|same:confirm_password',
+            'roles'=>'required',
+            'password'=>'required|same:confirm_password',
             'confirm_password'=>'required',
         ]);
 
