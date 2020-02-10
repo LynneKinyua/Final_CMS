@@ -16,10 +16,10 @@ Route::get('/', 'HomeController@index') ->name('home');
 Auth::routes();
 
 Route::middleware('auth', 'isAdmin')->namespace('Admin')->group(function(){
-    Route::get('admin/users', 'UsersController@index')->name('admin.users');
-    Route::get('admin/user/{id}', 'UsersController@getUser')->name('admin.user');
-    Route::post('admin/users/store', 'UsersController@store')->name('admin.users.store');
-    Route::get('admin/adminleads','AdminLeadsController@index')->name('admin.adminleads');
+    Route::get('admin/users', 'UsersController@index');
+    Route::get('admin/user/{id}', 'UsersController@getUser');
+    Route::post('admin/users/store', 'UsersController@store');
+    Route::get('admin/adminleads','AdminLeadsController@index');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
