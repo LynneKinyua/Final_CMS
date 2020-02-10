@@ -4,7 +4,7 @@
 
 <div class="row">
     
-    <div class="col-sm-2">
+    <div class="col-sm-5">
         <div class="card">
             <div class="card-body">
                 <button class="btn btn-block btn-primary" id="show-new-user-form">Add a New User</button>
@@ -22,7 +22,7 @@
              <ul class="list-group list-group-flush">
                 @if($users)
                     @foreach ($users as $user)
-                        <li class="list-group-item">($user->name)<a href="{{ route('admin.user', ['id' -> $user->id]) }}"></a></li>
+                    <li class="list-group-item"><a href="{{ route('admin.user', ['id' => $user->id]) }}">{{ $user->name }}</a></li>
                     @endforeach
 
                 @endif
