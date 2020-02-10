@@ -30,9 +30,7 @@
         </div>
     </div>
 </div>
-
 @endsection
-
 @push('admin.layouts.scripts.scripts')
     <script src="{{asset('js/admin/users.js') }}"></script>
 @endpush
