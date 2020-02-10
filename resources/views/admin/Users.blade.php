@@ -22,7 +22,7 @@
              <ul class="list-group list-group-flush">
                 @if($users)
                     @foreach ($users as $user)
-                    <li class="list-group-item"><a href="{{ route('admin.user', ['id' => $user->id]) }}">{{ $user->name }}</a></li>
+                    <li class="list-group-item"><a href="{{ url('admin/user', ['id' => $user->id]) }}">{{ $user->name }}</a></li>
                     @endforeach
 
                 @endif

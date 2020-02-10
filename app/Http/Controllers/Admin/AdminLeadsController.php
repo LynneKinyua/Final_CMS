@@ -6,7 +6,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\User;
 use App\Leads;
-//use App\Http\Controller\Controller;
+use App\Http\Controllers\Controller;
 
 class AdminLeadsController extends Controller
 {
@@ -21,7 +21,7 @@ class AdminLeadsController extends Controller
         $leads = Leads::paginate(10);
         $users = User::all();
 
-        return view('admin.adminleads',  ['leads' => $leads, 'users' => $users]);
+        return view('admin.leads',  ['leads' => $leads, 'users' => $users]);
     }
 
     /**

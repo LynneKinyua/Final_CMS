@@ -1,4 +1,4 @@
-<form action="{{ route('admin.users.store') }}" method="POST" id="new-user-form">      
+<form action="{{ url('admin/users/store') }}" method="POST" id="new-user-form">      
     @csrf       
     <div class="form-group">
         <label for="name">New User Name:</label>

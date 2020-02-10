@@ -89,13 +89,13 @@
                     <a href="{{ route('home') }}">
                         <h6 class="menu-item"><i class="fas fa-tachometer-alt"></i> Dashboard</h6>
                     </a>
-                    <a href="{{ route('admin.users') }}">
+                    <a href="{{ url('admin/users') }}">
                         <h6 class="menu-item"><i class="fas fa-users"></i> Users</h6>
                     </a>
                     <a href="#">
                         <h6 class="menu-item"><i class="far fa-handshake"></i> Clients</h6>
                     </a>
-                    <a href="{{ route('admin.adminleads') }}">
+                    <a href="{{ url('admin/adminleads') }}">
                         <h6 class="menu-item"><i class="fas fa-id-card-alt"></i> Leads</h6>
                     </a>
                     <a href="#">
