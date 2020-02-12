@@ -15,11 +15,14 @@ Route::get('/', 'HomeController@index') ->name('home');
 
 Auth::routes();
 
-Route::middleware('auth', 'isAdmin')->namespace('Admin')->group(function(){
+Route::middleware('auth')->namespace('Admin')->group(function(){
     Route::get('admin/users', 'UsersController@index');
     Route::get('admin/user/{id}', 'UsersController@getUser');
     Route::post('admin/users/store', 'UsersController@store');
     Route::get('admin/adminleads','AdminLeadsController@index');
+    Route::get('clients','ClientsController@index');
+    Route::post('clients', 'ClientsController@store');
+
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

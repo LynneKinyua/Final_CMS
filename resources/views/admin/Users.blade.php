@@ -7,7 +7,7 @@
     <div class="col-sm-5">
         <div class="card">
             <div class="card-body">
-                <button class="btn btn-block btn-primary" id="show-new-user-form">Add a New User</button>
+                <button class="btn btn-success btn-sm" id="show-new-user-form">Add a New User</button>
                 @component('admin.layouts.components.forms.add_user')
                 @endcomponent
             </div>

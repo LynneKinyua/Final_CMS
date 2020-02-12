@@ -2,8 +2,11 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(App\Leads::class, function (Faker $faker) {
     return [
+        'user_id'=> function () {
+            return factory('App\Users') ->create()->id;
+        },
         'created_by' => 1,
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
