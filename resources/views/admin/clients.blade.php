@@ -11,5 +11,7 @@
         @component('admin.layouts.components.forms.add_clients')
         @endcomponent
     </div>
+
 </div>
 @endsection
+
