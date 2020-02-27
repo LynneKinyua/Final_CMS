@@ -65,7 +65,7 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-sm-4">
-                                    Mr. Prospect
+                                   Leads
                                 </div>
                                 <div class="col-sm-4">
                                     February 9th, 2020

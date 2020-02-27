@@ -17,7 +17,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-    
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -89,13 +89,15 @@
                     <a href="{{ route('home') }}">
                         <h6 class="menu-item"><i class="fas fa-tachometer-alt"></i> Dashboard</h6>
                     </a>
-                    <a href="{{ route('admin.users') }}">
+                    @if( Auth::user()->roles == 'admin')
+                    <a href="{{ url('admin/users') }}">
                         <h6 class="menu-item"><i class="fas fa-users"></i> Users</h6>
                     </a>
-                    <a href="#">
+                    @endif
+                    <a href="{{ url('clients') }}">
                         <h6 class="menu-item"><i class="far fa-handshake"></i> Clients</h6>
                     </a>
-                    <a href="{{ route('admin.adminleads') }}">
+                    <a href="{{ url('admin/adminleads') }}">
                         <h6 class="menu-item"><i class="fas fa-id-card-alt"></i> Leads</h6>
                     </a>
                     <a href="#">
@@ -105,15 +107,17 @@
                     <a href="#">
                         <h6 class="menu-item"><i class="fas fa-book-open"></i> Reports</h6>
                     </a>
+                    @if( Auth::user()->roles == 'admin')
                     <a href="#">
                         <h6 class="menu-item"><i class="fas fa-cogs"></i> Settings</h6>
                     </a>
+                    @endif
                 </div>
             </div>
             <div class="content">
                 @yield('content')
             </div>
-            
+
         </main>
     </div>
     @stack('admin.layouts.styles')

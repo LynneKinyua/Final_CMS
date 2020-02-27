@@ -1,17 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-
+use App\Client;
 use Illuminate\Http\Request;
-use App\User;
-use App\Leads;
-use App\Http\Controllers\Controller;
-use Illuminate\Html\FormFacade;
 
-class AdminLeadsController extends Controller
+class ClientsController extends Controller
 {
-    
     /**
      * Display a listing of the resource.
      *
@@ -19,10 +14,7 @@ class AdminLeadsController extends Controller
      */
     public function index()
     {
-        $leads = Leads::paginate(10);
-        $users = User::all();
-
-        return view('admin.leads',  ['leads' => $leads, 'users' => $users]);
+        //
     }
 
     /**
@@ -43,7 +35,7 @@ class AdminLeadsController extends Controller
      */
     public function store(Request $request)
     {
-         // dd($request);
+        //
     }
 
     /**

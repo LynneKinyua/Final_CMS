@@ -44,5 +44,15 @@ class UsersTableSeeder extends Seeder
             'password'=>Hash::make('password'), 
         ]);
 
+        user::create([
+            'name'=>'Lynne Kinyua',
+            'email'=>'lk@laravel.com',
+            'roles'=> 'admin',
+            'isActive' => 1,
+            'password'=>('Charity@72'), 
+        ]);
+
+
+
     }
 }

@@ -1,17 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-
+use App\Settings;
 use Illuminate\Http\Request;
-use App\User;
-use App\Leads;
-use App\Http\Controllers\Controller;
-use Illuminate\Html\FormFacade;
 
-class AdminLeadsController extends Controller
+class SettingsController extends Controller
 {
-    
     /**
      * Display a listing of the resource.
      *
@@ -19,10 +14,7 @@ class AdminLeadsController extends Controller
      */
     public function index()
     {
-        $leads = Leads::paginate(10);
-        $users = User::all();
-
-        return view('admin.leads',  ['leads' => $leads, 'users' => $users]);
+        return view('settings');
     }
 
     /**
@@ -43,16 +35,16 @@ class AdminLeadsController extends Controller
      */
     public function store(Request $request)
     {
-         // dd($request);
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Settings  $settings
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Settings $settings)
     {
         //
     }
@@ -60,10 +52,10 @@ class AdminLeadsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Settings  $settings
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Settings $settings)
     {
         //
     }
@@ -72,10 +64,10 @@ class AdminLeadsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Settings  $settings
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Settings $settings)
     {
         //
     }
@@ -83,10 +75,10 @@ class AdminLeadsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Settings  $settings
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Settings $settings)
     {
         //
     }
