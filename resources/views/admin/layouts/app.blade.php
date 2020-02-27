@@ -17,7 +17,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-    
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -117,7 +117,7 @@
             <div class="content">
                 @yield('content')
             </div>
-            
+
         </main>
     </div>
     @stack('admin.layouts.styles')

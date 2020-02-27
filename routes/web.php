@@ -22,6 +22,10 @@ Route::middleware('auth')->namespace('Admin')->group(function(){
     Route::get('admin/adminleads','AdminLeadsController@index');
     Route::get('clients','ClientsController@index');
     Route::post('clients', 'ClientsController@store');
+    Route::get('reports','ReportsController@index');
+    Route::get('activities','ActivitiesController@index');
+    Route::get('settings','SettingsController@index');
+
 
 });
 

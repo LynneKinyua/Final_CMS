@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="row">
-    
+
     <div class="col-sm-5">
         <div class="card">
             <div class="card-body">
@@ -12,7 +12,7 @@
                 @endcomponent
             </div>
         </div>
-       
+
     </div>
     <div class="col-sm-5">
         <div class="card">
@@ -24,8 +24,7 @@
                     @foreach ($users as $user)
                     <li class="list-group-item"><a href="{{ url('admin/user', ['id' => $user->id]) }}">{{ $user->name }}</a></li>
                     @endforeach
-
-                @endif
+                 @endif
              </ul>
         </div>
     </div>
@@ -35,7 +34,7 @@
     <script src="{{asset('js/admin/users.js') }}"></script>
 @endpush
 @push('admin.layouts.styles')
-    <link rel="stylesheet" href="{{ asset('css.admin.user.css') }}">   
+    <link rel="stylesheet" href="{{ asset('css.admin.user.css') }}">
 @endpush
- 
+
 
